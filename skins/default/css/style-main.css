@@ -1,0 +1,105 @@
+/*   ----------------------------------- MAIN ------------------------------*/
+.info {
+	height: 20px;
+}
+.table-main  {
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+	width: 100%;
+}
+.main-checkbox:checked ~ input[type="checkbox"] {
+	display: none;
+}
+/*   -  --------------------------------- TABLE VIEW --------------------------*/
+td:nth-child(2), 
+td:nth-child(3) {
+	text-align: left;
+	
+}
+td:nth-child(3) .today {
+    color: red;
+    display: block;
+    float: right;
+}
+
+.del {
+	width: 20px;
+}
+td,th {
+	border: 1px solid #dddddd;
+	padding: 10px 5px;
+	position: relative;
+}
+
+td {
+	min-width: 20%;
+}
+
+
+/*   -  --------------------------------- TABLE VIEW --------------------------*/
+/* ------------------------------------- TD:HOVER -----------------------*/
+
+td:nth-child(2):hover, 
+td:nth-child(3):hover {
+	text-shadow: 0 0 1px black;
+} 
+/* ------------------------------------- RANGING FORM ----------------------- */
+
+.table-row-main th a {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+	right: 0px;
+}
+.table-row-main th a[href*="DESC"] {
+    top: 0px;
+}
+.table-row-main th a[href*="ASC"] {
+    bottom: 0px;
+}
+
+.table-row-main th a:first-child::before,
+.table-row-main th a:last-child::before {
+	position: absolute;
+	font-size: 1.6em;
+	display: block;
+	font-family: 'FontAwesome';
+	
+}
+.table-row-main th a:first-child::before {
+    content: "\f0de";
+	top: 4px;
+}
+.table-row-main th a:last-child::before {
+	content: "\f0dd";
+	top: -4px;
+
+}
+
+
+/* ------------------------------------- RANGING FORM ----------------------- */
+
+.span-del {
+	display: block;
+	position: relative;
+}
+
+.span-del::before {
+    content: "\f1f8";
+    font-size: 1.2em;
+    font-family: 'FontAwesome';
+    color: #ea0000;
+    line-height: 0px;
+}
+.table-main tr:nth-child(2n) {
+  background: #e8edff;
+}
+.table-main tr:hover{
+  background:#99bcff;
+
+}
+
+/* f1f8 del
+/*  f040 edit
+/*   f06e view

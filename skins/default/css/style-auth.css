@@ -1,0 +1,71 @@
+.info-auth {
+    text-align: center;
+    height: 20px;
+    margin: 20px;
+	font-size: 16px;
+}
+
+.block-form-auth {
+	width: 400px;
+    border: 1px solid #dddddd;
+    margin: auto;
+    padding: 20px;
+}
+.block-form-auth a {
+	margin-top: 14px;
+	display: block;
+}
+.block-form-auth a:hover {
+	text-decoration: underline;
+}
+
+.block-form-auth input[type="text"], 
+.block-form-auth input[type="password"] {
+	padding: 10px;
+ }
+.wrap-flex {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+.wrap-flex .btn {
+	margin-top: 10px;
+}
+
+.form-auth input[type="checkbox"] {
+	display: none;
+} 
+.check {
+	display: block;
+	position: relative;
+	margin-top: 20px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.check::before {
+	content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -7px;
+    left: 0px;
+    border: 1px solid #a9a9a9;
+}
+
+.helper {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    width: 26px;
+    height: 16px;
+    transform: rotate(-40deg);
+    border-left: 4px solid #008000;
+    border-bottom: 4px solid #008000;
+}
+
+.check input:checked ~ .helper {
+	display: block;
+}

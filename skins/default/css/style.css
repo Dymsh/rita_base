@@ -1,0 +1,209 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/skins/default/fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+  src: url('/skins/default/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('/skins/default/fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('/skins/default/fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('/skins/default/fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('/skins/default/fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}  
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
+	font-size: 1.4em;
+	padding: 0px;
+} 
+.container {
+	margin: auto;
+	font-size: 0.6em;
+	padding: 0px 80px 0px 80px;
+
+}
+/*   ------------------------------------------   header -------------------------------------------------------- */ 
+.header-main {
+
+	background: #22252d;
+	color: white;
+	padding: 20px 0 20px 0;
+}
+.logo {
+    margin-left: 20px;
+    height: 35px;
+    width: 120px;
+    text-align: center;
+    line-height: 35px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.logo a {
+	display: block;
+	height: 100%;
+}
+.logo:hover {
+	background: white;
+	color: black;
+	border: 1px solid white;
+	transition: 0.5s;
+}
+/* ------------------------------------------- SEARCH BLOCK ------------------*/
+
+.form-search {
+	position: relative;
+}
+.form-search span::before {
+	font-family: 'FontAwesome';
+    content: "\f002";
+    font-size: 1.2em;
+    line-height: 29px;
+	cursor: pointer;
+}
+.search-btn {
+    padding: 0 5px;
+}
+.input-search {
+    display: block;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    left: -195px;
+    line-height: 32px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.5s;
+    padding: 0 10px;
+}
+
+.input-search:focus,
+.input-search:active {
+	outline-offset: none;
+	border: none;
+	outline: none;
+}
+#search-unvisible {
+	display: none;
+}
+input[type="checkbox"]:checked + .input-search {
+	transform: scaleX(1);
+}
+
+input[type="checkbox"]:checked ~ .search-btn {
+	color: red;
+	background: white;
+}
+/* -------------------------------------------------------------------------------*/ 
+.navigation  ul{
+	list-style-type: none;
+	padding: 0px;
+	color: #9e9e9e;
+	margin: 0px;
+}
+
+.navigation li {
+	display: inline-block;
+ }
+.navigation li a,
+.navigation li label {
+	display: block;
+	margin-right: 30px;
+    border: 1px solid white;
+    line-height: 33px;
+    border-radius: 20px;
+    padding: 0 20px;
+	transition: 0.2s;
+ }
+.navigation li label:hover {
+	background: white;
+	color: black;
+} 
+.navigation li a:hover {
+	background: white;
+	color: black;
+} 
+
+.navigation li:nth-child(3):hover label {
+	background: #ff7575;
+	color: black;
+}
+.navigation li:nth-child(3):active label{
+	background: #ff7575;
+	color: red;
+	border: 1px solid red;
+}
+.navigation li:last-child label {
+	cursor: pointer;
+}
+
+/* --------------------------- DEL ALL ----------------------*/
+
+#btn-del {
+	display: none;
+}
+
+/*      -------------------------------------------    main  --------------------------------------------------------   */
+
+
+
+ /*  ---------------------------------------------- footer  ----------------------------------------------------*/  
+.fontawesome::before {
+	content: "\f1f9";
+	font-family: 'FontAwesome';
+}
+
+.footer-main {
+	margin-top: 50px;
+	color: white;
+	font-size: 0.8em;
+	padding:20px 0px 20px 0px; 
+}
+
+/*  ----------------------------------------------------- standarts  -------------------------------------------- */ 
+.text-align {
+	text-align: center;
+}
+.float-block-left {
+	float: left;
+}
+.float-block-right {
+	float: right;
+	
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.flex-conteiner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+/* ----------------------------------  BUTTONS ---------------------- */ 
+
+.btn {
+    display: block;
+    background: transparent;
+    border: 3px solid #000000;
+    height: 55px;
+	box-shadow: none;
+	text-transform: uppercase;
+	outline: none;
+
+}
+
+.btn:hover {
+	cursor: pointer;
+	box-shadow: 0 0 3px black;
+
+
+}
+.btn:active {
+	background: #000000;
+	color: #ffffff;
+	box-shadow: none;
+}

@@ -1,0 +1,31 @@
+.wrap-404 {
+    padding: 90px 0 125px 0;
+    background: url(/skins/default/img/Ships_Container_404.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    margin-bottom: -50px;
+}
+.mes-404 {
+	text-align: center;
+    color: red;
+    border: 1px solid red;
+    width: 500px;
+    margin: auto;
+    padding: 40px;
+    margin-bottom: 150px;
+	background-color: rgba(255, 255 , 255 , 0.8);
+}
+.button-404 {
+    font-weight: 16px;
+	color: #ff0000;
+	border: 2px solid #ff0000;
+	background-color: transparent;
+	width: 100px;
+	height: 30px;
+	transition: 0.5s;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+.button-404:hover {
+	color: #ffffff;
+	background-color: #ff0000;
+}

@@ -1,0 +1,65 @@
+.form-block {
+	padding: 20px 0 20px 0;
+}
+
+.form-block form input,
+.gender {
+	display: inline-block;
+	padding: 5px;
+	font-size: 1em;
+	margin-bottom: 10px;
+		
+}
+.form-block input[type="radio"] {
+	margin-right: 25px;
+}
+
+.form-block form input:not([type="radio"]) {
+	width: 40%;
+}
+.gender {
+	width: 150px;
+}
+
+.form-block span {
+	position: relative;
+}
+.form-block span::before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: -15px;
+    top: -4px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.form-block .mars::before {
+	content: "\f222";
+} 
+.form-block .venus::before {
+	content: "\f221";
+} 
+.textarea {
+    display: block;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.error {
+	position: absolute;
+	top: 230px;
+	color: red;
+	opacity: 0;
+}
+
+.pos1 {
+	top: 126px;
+}
+
+.pos2{
+	top: 126px;
+    left: 590px
+}

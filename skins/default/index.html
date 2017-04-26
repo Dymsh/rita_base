@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title><?php echo Core::$title;?></title>
+		<meta name="description" content="База клиентов">
+		<meta name="keywords" content="База клиентов">
+		<!--<link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+		<link rel="shortcut icon" href="/favicon.gif" type="image/x-icon">
+		<link href="/skins/default/css/style.css" rel="stylesheet">
+		<link href="/skins/default/css/style-del.css" rel="stylesheet">
+		<link href="/skins/default/css/style-<?php echo $_GET['page'];?>.css" rel="stylesheet">
+		<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.css" rel="stylesheet">
+		-->
+	</head>
+<body>
+	<header class="header-main">
+		<div class="container clearfix">
+			<div class="logo float-block-left" title="Home page">
+				<a href="/static/main">Rita's data base</a>
+			</div>
+			<?php if (isset($_SESSION['auth'])) echo '
+			<nav class="navigation float-block-right">
+				<ul>
+					<li>
+						<form class="form-search" action="" method="post">
+							<input id="search-unvisible" type="checkbox" name="check" value="ok">
+							<input class="input-search" type="text" name="search" value="" placeholder="Поиск по фамилии">
+							<label class="search-btn" for="search-unvisible"><span></span></label>
+						</form>
+					</li>
+					<li><a href="/static/new">new</a></li>
+					<li>
+						<input id="btn-del" form="delall" type="submit" name="btn_del_all" value="del_selected">
+						<label for="btn-del">del selected</label>
+					</li>
+					<li>
+						<a href="/static/main&auth=out">log out</a>
+					</li>
+				</ul>
+			</nav>
+			';?>
+		</div>
+	</header>
+	<main>
+		<?php include './skins/default/'.$_GET['modules'].'/'.$_GET['page'].'.tpl';?>
+	</main>
+	<footer class="wrap-header footer-main clearfix">
+		<div class="wrap-border">
+			<div class="copyright">
+				<p><span class="fontawesome"></span> copyright Rita <?php echo date('Y');?></p>
+			</div>
+
+		</div>
+	</footer>
+</body>
+</html>
